@@ -10,18 +10,30 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UILabel *greetLabel;
+
+- (IBAction)greetButton:(id)sender;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (IBAction)greetButton:(id)sender {
+	self.greetLabel.text = [self greetMessage];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSString *)greetMessage {
+	return [NSString stringWithFormat:@"Hello, %@", [self name]];
+}
+
+- (NSString *)name {
+	return [self isValidName] ? self.nameTextField.text : @"Stranger";
+}
+
+- (BOOL)isValidName {
+	NSString *name = [self.nameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+	return ![name isEqualToString:@""];
 }
 
 @end

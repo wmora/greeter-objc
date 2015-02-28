@@ -13,7 +13,7 @@
 		08D476E11AA26EF100DDFB78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D476DF1AA26EF100DDFB78 /* Main.storyboard */; };
 		08D476E31AA26EF100DDFB78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08D476E21AA26EF100DDFB78 /* Images.xcassets */; };
 		08D476E61AA26EF100DDFB78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08D476E41AA26EF100DDFB78 /* LaunchScreen.xib */; };
-		08D476F21AA26EF100DDFB78 /* GreeterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D476F11AA26EF100DDFB78 /* GreeterTests.m */; };
+		08D476FE1AA2750700DDFB78 /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D476FD1AA2750700DDFB78 /* ViewControllerTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		08D476E51AA26EF100DDFB78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		08D476EB1AA26EF100DDFB78 /* GreeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D476F01AA26EF100DDFB78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		08D476F11AA26EF100DDFB78 /* GreeterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreeterTests.m; sourceTree = "<group>"; };
+		08D476FD1AA2750700DDFB78 /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 		08D476EE1AA26EF100DDFB78 /* GreeterTests */ = {
 			isa = PBXGroup;
 			children = (
-				08D476F11AA26EF100DDFB78 /* GreeterTests.m */,
+				08D476FD1AA2750700DDFB78 /* ViewControllerTest.m */,
 				08D476EF1AA26EF100DDFB78 /* Supporting Files */,
 			);
 			path = GreeterTests;
@@ -229,7 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08D476F21AA26EF100DDFB78 /* GreeterTests.m in Sources */,
+				08D476FE1AA2750700DDFB78 /* ViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +414,7 @@
 				08D476F71AA26EF100DDFB78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08D476F81AA26EF100DDFB78 /* Build configuration list for PBXNativeTarget "GreeterTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				08D476FA1AA26EF100DDFB78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

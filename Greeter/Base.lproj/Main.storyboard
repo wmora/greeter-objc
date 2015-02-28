@@ -27,6 +27,9 @@
                                 <state key="normal" title="Greet">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="greetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bL3-b5-vYj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykj-HF-0l0" userLabel="Greet message">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -45,6 +48,10 @@
                             <constraint firstItem="exK-Pa-uXC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xlv-tD-UGQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetLabel" destination="Ykj-HF-0l0" id="jnV-eK-tNW"/>
+                        <outlet property="nameTextField" destination="exK-Pa-uXC" id="Md6-7a-KFy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
