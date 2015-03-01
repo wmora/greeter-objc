@@ -7,6 +7,13 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "ViewController.h"
+
+@interface ViewController ()
+
+- (NSString *)greetMessage;
+
+@end
 
 @interface ViewControllerTest : XCTestCase
 
@@ -14,26 +21,30 @@
 
 @implementation ViewControllerTest
 
-- (void)setUp {
-	[super setUp];
-	// Put setup code here. This method is called before the invocation of each test method in the class.
+- (void)testGreetMessageWithNilNameShouldBeHelloStranger {
+	ViewController *viewController = [[ViewController alloc] init];
+
+	NSString *greetMessage = [viewController greetMessage];
+
+	XCTAssert([greetMessage isEqualToString:@"Hello, Stranger"]);
 }
 
-- (void)tearDown {
-	// Put teardown code here. This method is called after the invocation of each test method in the class.
-	[super tearDown];
+- (void)testGreetMessageWithEmptyNameShouldBeHelloStranger {
+	ViewController *viewController = [[ViewController alloc] init];
+	viewController.nameTextField.text = @"";
+
+	NSString *greetMessage = [viewController greetMessage];
+
+	XCTAssert([greetMessage isEqualToString:@"Hello, Stranger"]);
 }
 
-- (void)testExample {
-	// This is an example of a functional test case.
-	XCTAssert(YES, @"Pass");
-}
+- (void)testGreetMessageWithNameWithOnlyWhitespacesShouldBeHelloStranger {
+	ViewController *viewController = [[ViewController alloc] init];
+	viewController.nameTextField.text = @"       ";
 
-- (void)testPerformanceExample {
-	// This is an example of a performance test case.
-	[self measureBlock: ^{
-	    // Put the code you want to measure the time of here.
-	}];
+	NSString *greetMessage = [viewController greetMessage];
+
+	XCTAssert([greetMessage isEqualToString:@"Hello, Stranger"]);
 }
 
 @end

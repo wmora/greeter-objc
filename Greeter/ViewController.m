@@ -10,9 +10,6 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UILabel *greetLabel;
-
 - (IBAction)greetButton:(id)sender;
 
 @end
@@ -32,6 +29,10 @@
 }
 
 - (BOOL)isValidName {
+	if (self.nameTextField.text == nil) {
+		return NO;
+	}
+
 	NSString *name = [self.nameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 	return ![name isEqualToString:@""];
 }
