@@ -2,6 +2,8 @@ language: objective-c
 branches:
   only:
   - master
+before_install:
+  - rake install
 script:
   - rake test
 after_success:
