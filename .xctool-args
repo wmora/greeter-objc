@@ -2,5 +2,6 @@
   "-project", "Greeter.xcodeproj",
   "-scheme", "Greeter",
   "-configuration", "Debug",
-  "-sdk", "iphonesimulator8.1"
+  "-sdk", "iphonesimulator8.1",
+  "-arch", "i386"
 ]
